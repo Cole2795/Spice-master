@@ -28,3 +28,6 @@ C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\BookLi
 C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\BookListRazor.dll
 C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\BookListRazor.pdb
 C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\BookListRazor.csproj.CopyComplete
+C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\Razor\Pages\BookList\Index.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\Razor\Pages\BookList\Create.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\BookListRazor\obj\Debug\netcoreapp2.2\Razor\Pages\BookList\Edit.g.cshtml.cs
