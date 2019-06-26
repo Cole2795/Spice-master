@@ -70,8 +70,10 @@ namespace Spice
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
 }
+//localhost:1234/{controller}/{action}/{id}
+//localhost:1234/Book/Index/2
