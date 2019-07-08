@@ -95,3 +95,5 @@ C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Ad
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Coupon\Details.g.cshtml.cs
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Coupon\Delete.g.cshtml.cs
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ThumbnailAreaPartial.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Customer\Views\Home\Details.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\User\Index.g.cshtml.cs
