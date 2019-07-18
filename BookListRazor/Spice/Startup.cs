@@ -13,6 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using Spice.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Spice.Utility;
+using Stripe;
+//using Spice.Service;
+//using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Spice
 {
@@ -44,6 +48,8 @@ namespace Spice
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSession(options =>
@@ -68,6 +74,8 @@ namespace Spice
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
