@@ -161,7 +161,7 @@
             }
 
 
-            $("#datepicker").datepicker({ minDate: minDt, maxDate: "+1W" });
+            $("#datepicker").datepicker({ dateformat: 'yyyy-mm-dd', minDate: minDt, maxDate: "+1W" }).datepicker( "option", "dateFormat", 'yyyy-mm-dd' );
             $("#timepicker").timepicker({ 'minTime': '11:00 AM', 'maxTime': '9:00 PM', step: '30' })
         });
 

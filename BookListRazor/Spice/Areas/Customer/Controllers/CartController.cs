@@ -134,7 +134,7 @@ namespace Spice.Areas.Customer.Controllers
             detailCart.OrderHeader.OrderDate = DateTime.Now;
             detailCart.OrderHeader.UserId = claim.Value;
             detailCart.OrderHeader.Status = SD.PaymentStatusPending;
-            detailCart.OrderHeader.PickupTime = Convert.ToDateTime(detailCart.OrderHeader.PickupDate.ToString() + " " + detailCart.OrderHeader.PickupTime.ToShortTimeString());
+            detailCart.OrderHeader.PickupTime = Convert.ToDateTime(detailCart.OrderHeader.PickupDate.ToShortDateString() + " " + detailCart.OrderHeader.PickupTime.ToShortTimeString());
 
             List<OrderDetails> orderDetailsList = new List<OrderDetails>();
             _db.OrderHeaderOrderHeader.Add(detailCart.OrderHeader);
@@ -222,8 +222,8 @@ namespace Spice.Areas.Customer.Controllers
 
 
 
-            return RedirectToAction("Index", "Home");
-           // return RedirectToAction("Confirm", "Order", new { id = detailCart.OrderHeader.Id });
+            //return RedirectToAction("Index", "Home");
+            return RedirectToAction("Confirm", "Order", new { id = detailCart.OrderHeader.Id });
 
         }
 
@@ -289,7 +289,7 @@ namespace Spice.Areas.Customer.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
+       
 
 
 
