@@ -52,6 +52,17 @@ namespace Spice
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = "2083214998653084";
+                facebookOptions.AppSecret = "e02feefaac0ff99953bdcdc8214a81d9";
+            });
+            services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = "151336799282-44uc6g7nl5indqhqae5uh30ja051bv3j.apps.googleusercontent.com";
+                googleOptions.ClientSecret = "c5AYKudCr5h3mWha6joNMTXk";
+            });
+            
             services.AddSession(options =>
             {
                 options.Cookie.IsEssential = true;

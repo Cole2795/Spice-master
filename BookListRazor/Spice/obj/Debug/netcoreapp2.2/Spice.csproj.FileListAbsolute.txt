@@ -104,3 +104,5 @@ C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Views\Sh
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Customer\Views\Order\OrderHistory.g.cshtml.cs
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_OrderStatus.g.cshtml.cs
 C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Customer\Views\Order\ManageOrder.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Areas\Customer\Views\Order\OrderPickup.g.cshtml.cs
+C:\GIT\Master-asp.net\BookListRazor\Spice\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\UserName\Default.g.cshtml.cs
