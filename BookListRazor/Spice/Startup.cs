@@ -15,8 +15,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Spice.Utility;
 using Stripe;
-//using Spice.Service;
-//using Microsoft.AspNetCore.Identity.UI.Services;
+using Spice.Service;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Spice
 {
@@ -48,7 +48,10 @@ namespace Spice
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //services.AddScoped<IDbInitializer, DbInitializer>();
             services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.AddSingleton<IEmailSender, EmailSender>();
+            services.Configure<EmailOptions>(Configuration);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -62,7 +65,6 @@ namespace Spice
                 googleOptions.ClientId = "151336799282-44uc6g7nl5indqhqae5uh30ja051bv3j.apps.googleusercontent.com";
                 googleOptions.ClientSecret = "c5AYKudCr5h3mWha6joNMTXk";
             });
-            
             services.AddSession(options =>
             {
                 options.Cookie.IsEssential = true;
@@ -87,7 +89,7 @@ namespace Spice
             }
 
             StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
-
+            //dbInitializer.Initialize();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -97,11 +99,9 @@ namespace Spice
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
+                    name: "areas",
                     template: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
 }
-//localhost:1234/{controller}/{action}/{id}
-//localhost:1234/Book/Index/2
